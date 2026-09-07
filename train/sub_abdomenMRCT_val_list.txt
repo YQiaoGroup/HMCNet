@@ -1,0 +1,5 @@
+./imagesTr/AbdomenMRCT_1020_0001.nii.gz
+./imagesTr/AbdomenMRCT_0006_0001.nii.gz
+./imagesTr/AbdomenMRCT_1017_0001.nii.gz
+./imagesTr/AbdomenMRCT_0001_0001.nii.gz
+./imagesTr/AbdomenMRCT_1005_0001.nii.gz

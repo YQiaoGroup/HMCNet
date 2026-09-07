@@ -1,0 +1,15 @@
+./images/OASIS_OAS1_0392_MR1/aligned_norm.nii.gz
+./images/OASIS_OAS1_0388_MR1/aligned_norm.nii.gz
+./images/OASIS_OAS1_0401_MR1/aligned_norm.nii.gz
+./images/OASIS_OAS1_0418_MR1/aligned_norm.nii.gz
+./images/OASIS_OAS1_0402_MR1/aligned_norm.nii.gz
+./images/OASIS_OAS1_0420_MR1/aligned_norm.nii.gz
+./images/OASIS_OAS1_0399_MR1/aligned_norm.nii.gz
+./images/OASIS_OAS1_0389_MR1/aligned_norm.nii.gz
+./images/OASIS_OAS1_0421_MR1/aligned_norm.nii.gz
+./images/OASIS_OAS1_0405_MR1/aligned_norm.nii.gz
+
+
+
+
+
