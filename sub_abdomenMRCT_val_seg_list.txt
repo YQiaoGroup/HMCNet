@@ -1,0 +1,3 @@
+./labelsTs/AbdomenMRCT_1020_0001.nii.gz
+./labelsTs/AbdomenMRCT_0006_0001.nii.gz
+
