@@ -1,74 +1,77 @@
-HMCNet
+# HMCNet
 
 This repository provides the training and evaluation code for HMCNet, together with pretrained model weights and quantitative inference results.
 
-Repository Structure
+## Repository Structure
 
+```text
 .
-├── HMCNet/                         # HMCNet architecture and supporting modules
-├── imagesTs/                       # Test images used by the provided evaluation example
-├── labelsTs/                       # Corresponding test segmentation labels
-├── results/                        # Excel files containing inference results
-├── train.py                        # Training code
-├── test.py                         # Evaluation code for AbdomenMRCT
-├── requirements.txt                # Python dependencies
-├── sub_abdomenMRCT_list.txt        # AbdomenMRCT data list
-├── sub_abdomenMRCT_val_list.txt    # AbdomenMRCT validation/test image list
-├── sub_abdomenMRCT_val_seg_list.txt # AbdomenMRCT validation/test label list
-└── *.pth                           # Pretrained model weights managed with Git LFS
+├── HMCNet/                          # HMCNet architecture and supporting modules
+├── imagesTs/                        # Test images for the evaluation example
+├── labelsTs/                        # Corresponding segmentation labels
+├── results/                         # Excel files containing inference results
+├── train.py                         # Training code
+├── test.py                          # Evaluation code for AbdomenMRCT
+├── requirements.txt                 # Python dependencies
+├── sub_abdomenMRCT_list.txt         # AbdomenMRCT data list
+├── sub_abdomenMRCT_val_list.txt     # AbdomenMRCT image list
+├── sub_abdomenMRCT_val_seg_list.txt # AbdomenMRCT segmentation-label list
+└── *.pth                            # Pretrained weights managed with Git LFS
+```
 
-Data Preparation
+## Data Preparation
 
-Before training or testing, update the dataset paths in train.py, test.py, and the corresponding data-list files to match your local environment.
+Before training or testing, update the dataset paths in `train.py`, `test.py`, and the corresponding data-list files according to your local environment.
 
-The provided imagesTs/ and labelsTs/ directories contain the image and segmentation-label structure used by the AbdomenMRCT evaluation example. Users should obtain all datasets from their original providers and comply with the corresponding licenses and data-use agreements.
+The provided `imagesTs/` and `labelsTs/` directories follow the data structure used by the AbdomenMRCT evaluation example.
 
-Training
+## Training
 
-The complete training procedure is implemented in train.py.
+The complete training procedure is implemented in `train.py`.
 
-After configuring the training data paths and other experiment settings, run:
+After configuring the training data paths, output directories, and other experimental settings, run:
 
+```bash
 python train.py
+```
 
-Training options, including dataset paths, checkpoint locations, and optimization settings, should be configured directly in train.py according to the target dataset and computing environment.
+The training options, including dataset paths, checkpoint locations, and optimization settings, can be configured directly in `train.py`.
 
-Testing on AbdomenMRCT
+## Testing on AbdomenMRCT
 
-The provided test.py implements evaluation on the AbdomenMRCT dataset.
+The provided `test.py` implements evaluation on the AbdomenMRCT dataset.
 
-Before testing, verify the following settings in test.py:
+Before running the evaluation, verify the following settings in `test.py`:
 
-The paths to the fixed and moving images.
+1. Paths to the fixed and moving images.
+2. Paths to the corresponding segmentation labels.
+3. Path to the pretrained `.pth` checkpoint.
+4. Output directory for registered images and evaluation results.
 
-The paths to the corresponding segmentation labels.
+Run the evaluation using:
 
-The path to the pretrained .pth checkpoint.
-
-The output directory for registered images and evaluation results.
-
-Run the evaluation with:
-
+```bash
 python test.py
+```
 
-Results
+## Results
 
-The results/ directory contains Excel files reporting the inference results of different registration models on six datasets:
+The `results/` directory contains Excel files reporting the inference results of different registration models on six datasets:
 
-OASIS
+- OASIS
+- SLIVER
+- BTCV
+- AbdomenMRCT
+- MMWHS
+- ThoraxCBCT
 
-SLIVER
+The reported evaluation metrics include:
 
-BTCV
+- Dice score;
+- average symmetric surface distance (ASSD);
+- percentage of folding voxels (Folds), where available.
 
-AbdomenMRCT
 
-MMWHS
-
-ThoraxCBCT
-
-The reported evaluation metrics include Dice score, average symmetric surface distance (ASSD), and the percentage of folding voxels (Folds), where available.
-
-Citation
+## Citation
 
 If you find this repository useful for your research, please cite the corresponding HMCNet paper. The complete citation information will be added upon publication.
